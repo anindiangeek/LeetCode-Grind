@@ -20,7 +20,7 @@ class Solution{
 
     bool find3Numbers(int A[], int n, int X)
     {
-        for (int i = 0; i <= n-3; i++)
+        for (int i = 0; i <n; i++)
         {
             int Y = X - A[i];
             // function call to Two sum for Y;
