@@ -7,14 +7,23 @@ class Solution{
     public:
     long long findMinDiff(vector<long long> a, long long n, long long m)
     {
-        sort(a.begin(),a.end());
-        long long s=0,e=m-1,answer=INT64_MAX;
-        while(e<n)
-        {
-            answer=min(a[e]-a[s],answer);
-            s++;e++;
-            
-        }
+        sort(a.begin(), a.end());
+
+        int Start = 0, End = m - 1;
+
+        long long answer = INT64_MAX;
+
+        /*
+		Another way of implementing the same thing.
+
+        for (int i = 0; i + m - 1 < n; i++)
+            answer = min(a[i + m - 1] - a[i], answer);
+
+        */
+
+        while (End < n)
+            answer = min(a[End++] - a[Start++], answer);
+
         return answer;
     }   
 };
