@@ -25,7 +25,7 @@ class Solution{
     bool find3Numbers(int A[], int size, int X)
     {
         sort(A, A + size);
-        for (int i = 0; i < size; i++)
+        for (int i = 0; i < size-3; i++)
         {
             int TargetSum = X - A[i];
             // function call to Two sum for Y;
