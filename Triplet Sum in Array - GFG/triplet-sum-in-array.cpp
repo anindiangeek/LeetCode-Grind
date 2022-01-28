@@ -6,25 +6,30 @@ using namespace std;
  // } Driver Code Ends
 class Solution{
     public:
-     bool TwoSum(int A[], int n, int Y,int j)
+     bool TwoSum(int A[], int size, int TargetSum, int j)
     {
-        unordered_set<int> Hash;
-        for (int i = j; i < n; i++)
+        int start = j, end = size - 1;
+        while (start < end)
         {
-            if (Hash.find(Y - A[i]) != Hash.end())
+            int CurrentSum = A[start] + A[end];
+            if (CurrentSum == TargetSum)
                 return true;
-            Hash.insert(A[i]);
+            else if (CurrentSum < TargetSum)
+                ++start;
+            else
+                --end;
         }
         return false;
     }
 
-    bool find3Numbers(int A[], int n, int X)
+    bool find3Numbers(int A[], int size, int X)
     {
-        for (int i = 0; i <n; i++)
+        sort(A, A + size);
+        for (int i = 0; i < size; i++)
         {
-            int Y = X - A[i];
+            int TargetSum = X - A[i];
             // function call to Two sum for Y;
-            if (TwoSum(A, n, Y,i))
+            if (TwoSum(A, size, TargetSum, i + 1))
                 return true;
         }
         return false;
