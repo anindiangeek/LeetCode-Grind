@@ -18,14 +18,8 @@ public:
 	    sort(s.begin(),s.end());
 	    
 	    for(int i=0;i<s.length();i++)
-	    {
-	       // char c=i+49;
-	       // cout<<c<<" "<<endl;
 	        if(s[i]!=char(i+49))
 	           return false;
-	        
-	    }
-	   
 	   return true;
 	    
 	    
