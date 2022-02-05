@@ -2,7 +2,7 @@ class Solution {
 public:
     void sortColors(vector<int>& nums) {
         //using DNF algorithm to solve the the problem.
-        int low=0,high=nums.size()-1,mid=0;
+        int low{},high=nums.size()-1,mid{};
         for(int i=0;mid<=high;i++)
         {
             switch(nums[i])
