@@ -23,7 +23,6 @@ class Solution
                 break;
             case 2:
                 swap(a[high--],a[i--]);
-                break;
             }
             i++;
         }
