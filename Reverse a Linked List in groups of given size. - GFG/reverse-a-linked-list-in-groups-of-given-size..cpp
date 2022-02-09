@@ -118,18 +118,18 @@ class Solution
         {
             node *start = prev->next;
             node *then = start->next;
-            // prev = reverser(start, prev, k - 1);
+            prev = reverser(start, prev, k - 1);
 
-            for (int j = 0; j < k - 1; j++)
-            {
+            // for (int j = 0; j < k - 1; j++)
+            // {
 
-                start->next = then->next;
-                then->next = prev->next;
-                prev->next = then;
-                then = start->next;
-            }
+            //     start->next = then->next;
+            //     then->next = prev->next;
+            //     prev->next = then;
+            //     then = start->next;
+            // }
 
-            prev = start;
+            // prev = start;
         }
 
         return dummy->next;
