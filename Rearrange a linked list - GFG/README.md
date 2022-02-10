@@ -1,5 +1,5 @@
 # Rearrange a linked list
-## Medium 
+##  Medium 
 <div class="problem-statement">
                 <p></p><p><span style="font-size:18px">Given a singly linked list, the task is to rearrange it in a way that all odd position nodes are together and all even positions node are together.<br>
 Assume the first element to be at position 1 followed by second element at position 2 and so on.<br>
