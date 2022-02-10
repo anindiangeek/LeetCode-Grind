@@ -32,9 +32,7 @@ public:
                 e=e->next;
             }
         }
-        if(o)
             o->next=Even->next;
-        if(e)
             e->next=nullptr;
         head=Odd->next;
         delete Odd;
