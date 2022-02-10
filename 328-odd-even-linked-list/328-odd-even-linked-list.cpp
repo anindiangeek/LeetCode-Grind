@@ -36,6 +36,9 @@ public:
             o->next=Even->next;
         if(e)
             e->next=nullptr;
-        return Odd->next;
+        head=Odd->next;
+        delete Odd;
+        delete Even;
+        return head;
     }
 };
