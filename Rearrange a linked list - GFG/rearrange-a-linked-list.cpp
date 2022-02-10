@@ -55,10 +55,8 @@ class Solution
                e=e->next;
            }
        }
-       if(o)
        o->next=even->next;
-        if(e)
-            e->next=nullptr;
+       e->next=nullptr;
     
     }
 };
