@@ -41,24 +41,13 @@ class Solution{
     /* Should return data of middle node. If linked list is empty, then  -1*/
     int getMiddle(Node *head)
     {
-        int length = 0;
-        Node *itr= head;
-        while(itr)
+        Node * slow =head, *fast=head;
+        while(fast && fast->next)
         {
-            itr=itr->next;
-            length++;
+            fast=fast->next->next;
+            slow=slow->next;
         }
-        length=(length & 1)?(length+1)/2:(length/2)+1;
-        itr= head;
-        while(length-1)
-        {
-            itr=itr->next;
-            length--;
-        }
-        
-        return itr->data;
-        
-        
+        return slow->data;
     }
 };
 
