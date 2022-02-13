@@ -102,14 +102,13 @@ class Solution
         
         if(!HasCycle) return;
         
-        slow =head;
+        slow=head;
+        // special check if the whole list is circular. that is intersection point is head.
         if(slow==fast)
-        {
             while(fast->next!=slow) fast=fast->next;
-        }
+        // keep this in mind that special case is the only edge case people miss
         else
         {
-            
             while(slow->next!=fast->next)
             {
                 slow=slow->next;
@@ -118,8 +117,6 @@ class Solution
         }
         
         fast->next=nullptr;
-        
-        
     }
 };
 
