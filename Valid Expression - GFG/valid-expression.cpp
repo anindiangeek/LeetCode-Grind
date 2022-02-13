@@ -28,10 +28,10 @@ bool valid(string s)
             
         else if(c==']' or c=='}' or c==')')
         {
-            if(stk.empty())
-                return false;
-            else if ((c==')' && stk.top()=='(') or (c==']' && stk.top()=='[') or (c=='}' && stk.top()=='{'))
+            if (stk.size() && (c==')' && stk.top()=='(') or (c==']' && stk.top()=='[') or (c=='}' && stk.top()=='{'))
                 stk.pop();
+            else
+                return false;
         } 
     }
     
