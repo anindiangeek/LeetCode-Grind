@@ -26,7 +26,7 @@ class Solution {
 	               }
 	            }
 	            if(q.empty())
-	                answer+="#";
+	                answer.push_back('#');
 		   }
 		   return answer;
 		}
