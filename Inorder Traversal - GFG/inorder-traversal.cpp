@@ -31,8 +31,8 @@ struct Node {
 
 class Solution {
     
+  vector<int> v;
   public:
-    vector<int> v;
     // Function to return a list containing the inorder traversal of the tree.
     vector<int> inOrder(Node* root) {
         if(!root) return {};
