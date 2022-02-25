@@ -11,24 +11,23 @@
  */
 class Solution {
 public:
-  bool isValidBST(TreeNode *root)
-  {
-      stack<TreeNode *> s;
-    TreeNode *PreviousNode = nullptr;
-    while (root or !s.empty())
-    {
-      while (root)
-      {
-        s.push(root);
-        root = root->left;
-      }
-      root = s.top();
-      s.pop();
-      if (PreviousNode && root->val <= PreviousNode->val)
-        return false;
-      PreviousNode = root;
-      root = root->right;
-    }
-    return true;
-  }
+    	TreeNode *PreviousNode = nullptr;
+	bool isValidBST(TreeNode *root)
+	{
+		if (!root)
+			return true;
+
+		if (!isValidBST(root->left))
+			return false;
+
+		if (PreviousNode /* Exists */ && PreviousNode->val >= root->val)
+			return false;
+
+		PreviousNode = root;
+
+		if (!isValidBST(root->right))
+			return false;
+
+		return true;
+	}
 };
