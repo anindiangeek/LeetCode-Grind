@@ -35,7 +35,9 @@ class Solution{
         }
         // BS from l-->high && low--->h
         int a = LeftSearch(A, l, high, key);
+        
         int b = LeftSearch(A, low, h, key);
+        
         if (a < 0)
             return b;
         else
