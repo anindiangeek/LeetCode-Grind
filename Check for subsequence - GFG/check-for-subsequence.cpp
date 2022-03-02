@@ -9,11 +9,9 @@ class Solution{
     bool isSubSequence(string A, string B) 
     {
         int l{0},h{0};
-        
-        while(l<A.length() && h<B.length())
+        while(h<B.length())
             if(B[h++]==A[l]) l++;
         return (l==A.length());
-        
     }
 };
 
