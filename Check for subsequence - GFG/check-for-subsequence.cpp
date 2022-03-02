@@ -8,14 +8,11 @@ class Solution{
     public:
     bool isSubSequence(string A, string B) 
     {
-        int l{0},h{0},n=A.length(),m=B.length();
+        int l{0},h{0};
         
-        while(l<n && h<m)
-        {
-            if(B[h]==A[l]) l++;
-                h++;
-        }
-        return (l==n);
+        while(l<A.length() && h<B.length())
+            if(B[h++]==A[l]) l++;
+        return (l==A.length());
         
     }
 };
