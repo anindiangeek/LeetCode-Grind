@@ -13,15 +13,7 @@ class Solution{
     // Function to check if given number n is a power of two.
     bool isPowerofTwo(long long n)
     {
-        if(n==1) return true;
-        if(n==0) return false;
-        while(n)
-        {
-            if(n==1) break;
-            if(n%2!=0) return false;
-            n/=2;
-        }
-        return true;
+        return __builtin_popcountll(n)==1;
     }
 };
 
