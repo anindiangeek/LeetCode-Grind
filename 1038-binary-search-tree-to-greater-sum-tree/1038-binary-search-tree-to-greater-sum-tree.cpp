@@ -45,9 +45,5 @@ public:
                 s.push(t->left);
         }
         return root;
-        
-       
-        return root;
-        
     }
 };
